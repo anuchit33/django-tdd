@@ -7,6 +7,7 @@
 ### 2. Run Docker-compose
 ```
 $ cd django-tdd
+$ cp web/web/config-kel.py web/web/config.py
 $ docker-compose -f "docker-compose.yml" up -d --build
 ```
 
