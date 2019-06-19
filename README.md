@@ -15,6 +15,6 @@ $ docker-compose -f "docker-compose.yml" up -d --build
 $ cd django-tdd
 $ virtualenv -p python3 env
 $ source env/bin/activate
-$ pip install -r requirements.txt
+$ pip install -r e2e/requirements.txt
 $ robot e2e/users.robot
 ```
