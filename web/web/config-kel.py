@@ -1,3 +1,7 @@
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -8,3 +12,9 @@ DATABASES = {
         'PORT' : '5432',
     }
 }
+
+STATIC_URL = '/static/'
+STATIC_ROOT = '../static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = '../media/'

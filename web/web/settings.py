@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+&0dir6kjuyt7irz76vn09n76!6-9841o$l_1ntvnomfish($i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = DEBUG
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ALLOWED_HOSTS
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+    'rest_framework',
     'myapp'
 ]
 
@@ -122,4 +122,4 @@ MEDIA_ROOT = MEDIA_ROOT
 
 
 # fixtures
-FIXTURES_ROOT = os.path.abspath(os.path.dirname(__file__)) + '/fixtures/'
+FIXTURE_DIRS = ('./fixtures/',)

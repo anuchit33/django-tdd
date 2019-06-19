@@ -5,3 +5,6 @@ media/
 migrations/
 .DS_Store
 config.py
+log.html
+output.xml
+report.html

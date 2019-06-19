@@ -15,9 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-
+from django.conf import settings
+from .views import InitData
+from django.conf.urls import url, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),
     
 ]
+
+if settings.DEBUG is True :
+    urlpatterns.append(
+        url(r'^init-data/$', InitData.as_view(), name="init-data")
+    )

@@ -4,7 +4,7 @@ from django.urls import reverse
 # Create your tests here.
 class UsersViewTest(TestCase):
 
-    fixtures = ['auth.json',]
+    fixtures = ['auth-user.json',]
 
     def setUp(self):
         print("setUp: Run once for every test method to setup clean data.")
