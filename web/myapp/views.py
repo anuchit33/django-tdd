@@ -4,18 +4,27 @@ from myapp.forms.AddUserForm import AddUserForm
 
 # Create your views here.
 def IndexPage(request):
-    form = None
+    status = 200
     form = AddUserForm()
 
     # if request.method =='POST':
     # #     form = AddUserForm(request.POST)
-
+    if request.method =='POST':
+        form = AddUserForm(request.POST)
+        # check whether it's valid:
+        if form.is_valid():
+            form.save()
+            status = 201
+        else:
+            status = 400
+    else:
+        form = AddUserForm()
     context = {
        'user_list':User.objects.all(),
        'form': form
     }
 
-    return render(request, "myapp/index.html", context)
+    return render(request, "myapp/index.html", context,status=status)
 
 
 
